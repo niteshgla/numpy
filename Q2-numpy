@@ -1,0 +1,12 @@
+#### 29. How to round away from zero a float array ? (★☆☆)
+
+
+```python
+# Author: Charles R Harris
+
+Z = np.random.uniform(-10,+10,10)
+print(np.copysign(np.ceil(np.abs(Z)), Z))
+
+# More readable but less efficient
+print(np.where(Z>0, np.ceil(Z), np.floor(Z)))
+```
